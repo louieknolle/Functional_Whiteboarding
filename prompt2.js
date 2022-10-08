@@ -1,16 +1,17 @@
 const removeArrayDuplicates = (inputArray) => {
-    if(Array.isArray(inputArray) === false) {
+    if(Array.isArray(inputArray) === false 
+    || inputArray.length === 0) {
         return 'This is array-neous!';
-    } else {  
-        var singleValuesArray = [];
-        inputArray.forEach(element => {
-            if (!singleValuesArray.includes(element)) {
-            singleValuesArray.push(element);
-            }
-        });
-        return singleValuesArray;
-    }
-    
+    } 
+
+    let singleValuesArray = [];
+    inputArray.forEach(element => {
+        if (!singleValuesArray.includes(element)) {
+        singleValuesArray.push(element);
+        }
+    });
+
+    return singleValuesArray;
 }
 
 // with filter 
