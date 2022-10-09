@@ -14,10 +14,10 @@ const compressString = (inputString) => {
   for(let i = 0; i <= inputString.length; i++) {
   	count ++;
     if(inputString[i] !== inputString[i+1] && count > 1) {
-    	outputString += inputString[i] + count;
+    	outputString = `${outputString}${inputString[i]}${count}`;
       count = 0;
     } else if(inputString[i] !== inputString[i+1]) {
-    	outputString += inputString[i];
+    	outputString = `${outputString}${inputString[i]}`;
       count = 0;
     }
   }
