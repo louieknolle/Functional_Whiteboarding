@@ -1,0 +1,20 @@
+//assigned prompt 4 for live whiteboarding 
+//checking for each character's uniqueness in a string
+//canNOT convert to array/use array methods
+//algorithm returns true if all characters are unique, false if not
+
+//interviewer says do not need to consider edge cases
+//also allows built-in JS string methods if needed
+
+//will need to loop through the string and see if the character occurs more than once
+//could add each character to new string and return false if it already exists
+//could check during same iteration if same character occurs at a different index
+
+const isEachStringCharUnique = (stringInput) => {
+  for (i = 0; i < stringInput.length; i++) {
+    if (stringInput.indexOf(stringInput[i]) !== stringInput.lastIndexOf(stringInput[i])) {
+      return false;
+    }
+  }
+  return true;
+}
